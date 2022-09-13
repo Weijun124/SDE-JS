@@ -1,3 +1,53 @@
 * {
     box-sizing: border-box;
   }
+
+  header{
+    border: 2px black solid;
+    height: 90px;
+    margin-bottom: 2%;
+    background-color: pink;
+  }
+
+  li{
+    border: 2px black solid;
+    background-color: green;
+    text-decoration: none;
+    width: 15%;
+    float:left;
+  }
+  
+  
+
+  body{
+    border: 2px black solid;
+    height: 1000px;
+    background-color: yellow;
+  }
+
+  #leftCon{
+    border: 2px black solid;
+    height: 750px;
+    width: 40%;
+    margin-left: 5%;
+    background-color: lavender;
+    margin-bottom: 2%;
+    float:left;
+  }
+
+  #rightCon{
+    border: 2px black solid;
+    height: 750px;
+    width: 49%;
+    margin-right: 5%;
+    background-color:red;
+    margin-bottom: 2%;
+    float:right;
+  }
+
+  footer{
+    border: 2px black solid;
+    height: 75px;
+    background-color: green;
+    clear: both;
+  }
