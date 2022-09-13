@@ -10,8 +10,6 @@ let apiKey =
 //to put detail information about addresses on&name  specifi res.
 //https://api.yelp.com/v3/businesses/matches
 
-
-
 document.getElementById("form").addEventListener("submit", (e)=>{
       e.preventDefault();
       const locationArea=document.getElementById("location").value;
