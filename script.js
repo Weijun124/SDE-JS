@@ -17,6 +17,10 @@ document.getElementById("form").addEventListener("submit", (e)=>{
       const locationArea=document.getElementById("location").value;
       const categories = document.getElementById("categories").value;
       console.log(locationArea)
+  while (cardContainer.firstChild) {
+    cardContainer.firstChild.remove();
+    }
+  document.getElementById("form").reset();
       inputInfor(locationArea,categories);
 })
 
@@ -32,14 +36,13 @@ function inputInfor(locationArea,categories){
     let endPoint = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${apiKey}&apiUrl=${encodeWeb}`;
 axios(endPoint)
     .then((result) => {
+        console.log(result);
       createCard(result.data.businesses)
     }).catch((err)=>console.error(err));
 }
 
-
 function createCard(value){
     let listNumber=0;
-
     if(value.length>10){
         listNumber=10;
     }else{
@@ -67,8 +70,36 @@ function createCard(value){
 
         const addresses=document.createElement("h6");
         addresses.classList.add("addresses")
-        addresses.innerText =`Addresses : ${value[i].location.display_address.join(" ")}`; ;
+        addresses.innerText =`Addresses : ${value[i].location.display_address.join(" ")}`; 
         infor.append(addresses);
+
+        const price=document.createElement("h6");
+        price.classList.add("price")
+        price.innerText =`price : ${value[i].price}`; 
+        infor.append(price);
+
+        const rating=document.createElement("h6");
+        rating.classList.add("rating")
+        rating.innerText =`rating : ${value[i].rating}`; 
+        infor.append(rating);
+
+        const phoneNumber=document.createElement("div");
+        phoneNumber.classList.add("phoneNumber")
+        phoneNumber.innerText =`phone : ${value[i].phone}`; 
+        infor.append(rating);
+
+        const transactions=document.createElement("div");
+        transactions.classList.add("transactions")
+        transactions.innerText =`transactions : ${value[i].transactions.join(" , ")}`; 
+        infor.append(transactions);
+
+
+        const learnMore=document.createElement("a");
+        learnMore.classList.add("learnMore")
+        learnMore.innerText ="Learn More"; 
+        learnMore.href =value[i].url; 
+        learnMore.setAttribute("target","_blank")
+        infor.append(learnMore);
     }
 }
 
@@ -84,12 +115,3 @@ function createCard(value){
 
 
 
-
-
-//   e.preventDefault();
-//   while (movieContainer.firstChild) {
-//       movieContainer.firstChild.remove();
-//     }
-//   const searchValue=document.getElementById("searchBar").value;
-//   searchShows(searchValue)
-//   document.getElementById("form").reset();
