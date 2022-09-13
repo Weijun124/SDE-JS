@@ -1,83 +1,69 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-<<<<<<< HEAD
-#topHeader{
-=======
-  header{
-    display: flex;
-    justify-content: center;
->>>>>>> 3fad2ffbc7e4b5bde00a9a4931c753b5ae787e11
-    border: 2px black solid;
-    height: 90px;
-    margin-bottom: 2%;
-    background-color: pink; 
-  }
-#bar{
+header{
   display: flex;
-  justify-content: end;
-  align-content:flex-end;
+  justify-content: center;
+  border: 2px black solid;
+  height: 90px;
+  margin-bottom: 2%;
+  background-color: pink; 
 }
-#ul{
-  justify-content: end;
-  align-content:flex-end;
+
+li{
+  border: 2px black solid;
+  background-color: green;
+  text-decoration: none;
+  width: 15%;
+  float:left;
 }
 
 
-  /* li{
-    border: 2px black solid;
-    background-color: green;
-    text-decoration: none;
-    width: 15%;
-    float:left;
-  }
-   */
-  
 
-  body{
-    border: 2px black solid;
-    height: 1000px;
-    background-color: yellow;
-  }
+body{
+  border: 2px black solid;
+  height: 1000px;
+  background-color: yellow;
+}
 
-  #leftCon{
-    display: flex;
-    border: 2px black solid;
-    height: 750px;
-    width: 75%;
-    margin-left: 5%;
-    background-color: lavender;
-    margin-bottom: 2%;
-    float:center;
-    justify-content: center;
-  }
+#leftCon{
+  display: flex;
+  border: 2px black solid;
+  height: 750px;
+  width: 75%;
+  margin-left: 5%;
+  background-color: lavender;
+  margin-bottom: 2%;
+  float:center;
+  justify-content: center;
+}
 
-  #rightCon{
-    border: 2px black solid;
-    height: 750px;
-    width: 50%;
-    margin:auto;
-    background-color:red;
-    margin-bottom: 2%;
-    float:right;
-  }
+#rightCon{
+  border: 2px black solid;
+  height: 750px;
+  width: 50%;
+  margin:auto;
+  background-color:red;
+  margin-bottom: 2%;
+  float:right;
+}
 
-  footer{
-    border: 2px black solid;
-    height: 75px;
-    background-color: teal;
-    clear: both;
-  }
-  #left {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+footer{
+  border: 2px black solid;
+  height: 75px;
+  background-color: teal;
+  clear: both;
+}
+#left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
 
-  }
+}
 
-  #bottom{
-    display: flex;
-    align-items:center;
-    justify-content:space-evenly;
-  }
+#bottom{
+  display: flex;
+  align-items:center;
+  justify-content:space-evenly;
+}

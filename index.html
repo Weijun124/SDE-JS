@@ -18,45 +18,6 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-<<<<<<< HEAD
-    <header id="topHeader">
-      <h1>Restaurant Scanner</h1>
-      <section id="bar">
-        <ul id="ul">
-          <tr><a href="#">Home</a></tr>
-          <tr><a href="#">About Us</a></tr>
-          <tr class="contact"><a href="#">Contact Us</a></tr>
-        </ul>
-      </section>
-    </header>
-    <section id="leftCon">
-      <form id="form">
-        <label for="location">Location</label>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          placeholder="Enter the location"
-        />
-
-        <label for="categories">Keyword</label>
-        <input
-          type="text"
-          id="categories"
-          name="categories"
-          placeholder="categories"
-        />
-
-        <label for="destination">Price</label>
-        <input type="text" id="price" name="price" placeholder="Price Range" />
-        <input type="submit" value="Search" />
-      </form>
-    </section>
-
-    <section id="cardContainer">
-      <!--Miggie:  this will have the carosel from bootstrap -->
-    </section>
-=======
     <header>
       <img src="./src/logo.png" alt="logo c" />
       <h1>Restaurant Scanner</h1>
@@ -78,8 +39,8 @@
         <section id="leftCon">
           <!--Miggie: add form here Miggie... -->
 
-          <form>
-            <label for="location">Location</label><br />
+          <form id="form">
+            <label for="location" required>Location</label><br />
             <input
               type="text"
               id="location"
@@ -87,12 +48,12 @@
               placeholder="Enter the location"
             /><br />
 
-            <label for="keyword">Keyword</label><br />
+            <label for="categories">categories</label><br />
             <input
               type="text"
-              id="keywordn"
-              name="keyword"
-              placeholder="Keyword"
+              id="categories"
+              name="categories"
+              placeholder="categories"
             /><br />
 
             <label for="photo">Ratings</label><br />
@@ -123,7 +84,6 @@
         <!--Miggie:  this will have the carosel from bootstrap -->
       </section>
     </div>
->>>>>>> 3fad2ffbc7e4b5bde00a9a4931c753b5ae787e11
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
