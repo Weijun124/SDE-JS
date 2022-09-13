@@ -70,27 +70,27 @@ function createCard(value){
 
         const addresses=document.createElement("h6");
         addresses.classList.add("addresses")
-        addresses.innerText =`Addresses : ${value[i].location.display_address.join(" ")}`; 
+        addresses.innerText =`Address : ${value[i].location.display_address.join(" ")}`; 
         infor.append(addresses);
 
         const price=document.createElement("h6");
         price.classList.add("price")
-        price.innerText =`price : ${value[i].price}`; 
+        price.innerText =`Price : ${value[i].price}`; 
         infor.append(price);
 
         const rating=document.createElement("h6");
         rating.classList.add("rating")
-        rating.innerText =`rating : ${value[i].rating}`; 
+        rating.innerText =`Rating : ${value[i].rating}`; 
         infor.append(rating);
 
         const phoneNumber=document.createElement("div");
         phoneNumber.classList.add("phoneNumber")
-        phoneNumber.innerText =`phone : ${value[i].phone}`; 
+        phoneNumber.innerText =`Phone : ${value[i].phone}`; 
         infor.append(rating);
 
         const transactions=document.createElement("div");
         transactions.classList.add("transactions")
-        transactions.innerText =`transactions : ${value[i].transactions.join(" , ")}`; 
+        transactions.innerText =`Transactions : ${value[i].transactions.join(" , ")}`; 
         infor.append(transactions);
 
 
