@@ -1,7 +1,7 @@
 let apiKey =
   "2GtM4rUXq5x4gU58dniAqURjtQBXsi-7ez8M9eJ9UNe7P72UHJtrknhKNKcH8vy6UHMfLbNe_Og0uPzUrdK48Zv9vIm2KR9iY035tz1dnrsuJiQyGy-a6JYVxlkfY3Yx";
 
-  const cardContainer = document.getElementById("cardContainer");
+  const cardContainer = document.getElementById("rightCon");
   const imgsrc="https://img.freepik.com/premium-vector/update-concept-application-loading-process-symbol-web-screen-vector-illustration-flat_186332-1253.jpg?";
 
 //use restrant id for find the review
@@ -16,19 +16,15 @@ document.getElementById("form").addEventListener("submit", (e)=>{
       e.preventDefault();
       const locationArea=document.getElementById("location").value;
       const categories = document.getElementById("categories").value;
-      const transactions=document.getElementById("transactions").value;
-      inputInfor(locationArea,categories,transactions);
+      console.log(locationArea)
+      inputInfor(locationArea,categories);
 })
 
 
-function inputInfor(locationArea,categories,transactions){
+function inputInfor(locationArea,categories){
     let requireUrl=`https://api.yelp.com/v3/businesses/search?location=${locationArea}`;
     if(categories){
         requireUrl+=`&categories=${categories}`;
-        console.log(requireUrl);
-    }
-    if(transactions){
-        requireUrl+=`&topen_now`;
         console.log(requireUrl);
     }
     const encodeWeb=encodeURIComponent(requireUrl)
@@ -36,9 +32,7 @@ function inputInfor(locationArea,categories,transactions){
     let endPoint = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${apiKey}&apiUrl=${encodeWeb}`;
 axios(endPoint)
     .then((result) => {
-        console.log(result.data.businesses)
       createCard(result.data.businesses)
-
     }).catch((err)=>console.error(err));
 }
 
