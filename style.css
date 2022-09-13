@@ -4,11 +4,12 @@
 
 header{
   display: flex;
+  align-items: center;
   justify-content: center;
-  border: 2px black solid;
+  border: 2px lavender;
   height: 90px;
   margin-bottom: 2%;
-  background-color: pink; 
+  background-color: lavender; 
 }
 
 li{
@@ -19,17 +20,19 @@ li{
   float:left;
 }
 
-
+.restImg {
+  max-width: 300px;
+}
 
 body{
-  border: 2px black solid;
+  border: 2px lavender;
   height: 1000px;
-  background-color: yellow;
+  background-color: lavender;
 }
 
 #leftCon{
   display: flex;
-  border: 2px black solid;
+  border: 2px solid lavender;
   height: 750px;
   width: 75%;
   margin-left: 5%;
@@ -39,20 +42,29 @@ body{
   justify-content: center;
 }
 
+label {
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 8px;
+}
+
 #rightCon{
   border: 2px black solid;
   height: 750px;
   width: 50%;
   margin:auto;
-  background-color:red;
+  background-color:lavender;
   margin-bottom: 2%;
   float:right;
+  overflow: scroll;
 }
 
 footer{
-  border: 2px black solid;
+  border: 2px lavender;
   height: 75px;
-  background-color: teal;
+  background-color: lavender;
   clear: both;
 }
 #left {
@@ -62,8 +74,41 @@ footer{
 
 }
 
-#bottom{
+#bottom {
   display: flex;
   align-items:center;
   justify-content:space-evenly;
+
+}
+
+@media (max-width: 576px) {
+  h1{
+    display: none;
+  }
+  #bottom {
+    flex-direction: column;
+  }
+  #leftCon {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  #list{
+    display:flex;
+    flex-direction: column;
+  }
+  #form{
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+#list {
+  display: inline;
+  justify-content: center;
+  margin-left: 12px;
+}
+}
+@media (max-width: 992px) {
+#list {
+  margin-left: 12px;
+}
 }
