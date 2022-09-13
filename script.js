@@ -16,19 +16,15 @@ document.getElementById("form").addEventListener("submit", (e)=>{
       e.preventDefault();
       const locationArea=document.getElementById("location").value;
       const categories = document.getElementById("categories").value;
-      const transactions=document.getElementById("transactions").value;
-      inputInfor(locationArea,categories,transactions);
+      console.log(locationArea)
+      inputInfor(locationArea,categories);
 })
 
 
-function inputInfor(locationArea,categories,transactions){
+function inputInfor(locationArea,categories){
     let requireUrl=`https://api.yelp.com/v3/businesses/search?location=${locationArea}`;
     if(categories){
         requireUrl+=`&categories=${categories}`;
-        console.log(requireUrl);
-    }
-    if(transactions){
-        requireUrl+=`&topen_now`;
         console.log(requireUrl);
     }
     const encodeWeb=encodeURIComponent(requireUrl)

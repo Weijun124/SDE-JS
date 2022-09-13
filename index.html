@@ -18,53 +18,41 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
+    <header id="topHeader">
       <h1>Restaurant Scanner</h1>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li class="contact"><a href="#">Contact Us</a></li>
-      </ul>
+      <section id="bar">
+        <ul id="ul">
+          <tr><a href="#">Home</a></tr>
+          <tr><a href="#">About Us</a></tr>
+          <tr class="contact"><a href="#">Contact Us</a></tr>
+        </ul>
+      </section>
     </header>
     <section id="leftCon">
-      <!--Miggie: add form here Miggie... -->
-
-      <form>
-        <label for="location">Location</label><br />
+      <form id="form">
+        <label for="location">Location</label>
         <input
           type="text"
           id="location"
           name="location"
           placeholder="Enter the location"
-        /><br />
+        />
 
-        <label for="keyword">Keyword</label><br />
+        <label for="categories">Keyword</label>
         <input
           type="text"
-          id="keywordn"
-          name="keyword"
-          placeholder="Keyword"
-        /><br />
+          id="categories"
+          name="categories"
+          placeholder="categories"
+        />
 
-        <label for="photo">Ratings</label><br />
-        <input
-          type="text"
-          id="ratings"
-          name="ratings"
-          placeholder="Ratings?"
-        /><br />
-
-        <label for="destination">Price</label><br />
+        <label for="destination">Price</label>
         <input type="text" id="price" name="price" placeholder="Price Range" />
-        <br />
-        <br />
-
         <input type="submit" value="Search" />
-        <br />
       </form>
     </section>
 
-    <section id="rightCon">
+    <section id="cardContainer">
       <!--Miggie:  this will have the carosel from bootstrap -->
     </section>
     <footer></footer>

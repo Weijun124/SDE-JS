@@ -2,21 +2,31 @@
     box-sizing: border-box;
   }
 
-  header{
+#topHeader{
     border: 2px black solid;
     height: 90px;
     margin-bottom: 2%;
     background-color: pink;
   }
+#bar{
+  display: flex;
+  justify-content: end;
+  align-content:flex-end;
+}
+#ul{
+  justify-content: end;
+  align-content:flex-end;
+}
 
-  li{
+
+  /* li{
     border: 2px black solid;
     background-color: green;
     text-decoration: none;
     width: 15%;
     float:left;
   }
-  
+   */
   
 
   body{
