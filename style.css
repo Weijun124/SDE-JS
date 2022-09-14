@@ -136,7 +136,7 @@ input {
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0px;
   height: 15px;
-}
+} */
