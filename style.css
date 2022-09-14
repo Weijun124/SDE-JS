@@ -20,26 +20,38 @@ li {
   float: left;
 }
 
+#form {
+  background-color: rgba(0,0,0,0.35);
+  height:80%
+}
+
+
 .restImg {
   max-width: 300px;
 }
 
 body {
+  background-image:url('https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border: 2px lavender;
-  height: 1000px;
-  background-color: lavender;
+  width: 100%;
+  height: 100vh;
+ background-color: lavender;
 }
 
 #leftCon {
   display: flex;
-  border: 2px solid lavender;
-  height: 750px;
+  /* border: 2px solid lavender; */
+  height: 500px;
   width: 75%;
   margin-left: 5%;
-  background-color: lavender;
+  /* background-color: lavender; */
   margin-bottom: 2%;
   float: center;
   justify-content: center;
+  color:white;
 }
 
 label {
@@ -51,21 +63,12 @@ input {
 }
 
 #rightCon {
-  border: 2px black solid;
   height: 750px;
   width: 50%;
   margin: auto;
-  background-color: lavender;
   margin-bottom: 2%;
   float: right;
   overflow: scroll;
-}
-
-footer {
-  border: 2px lavender;
-  height: 75px;
-  background-color: lavender;
-  clear: both;
 }
 
 #left {
@@ -82,6 +85,17 @@ footer {
 
 }
 
+.restCard {
+  color: white;
+}
+
+.restCard:hover {
+  background-color: teal;
+
+}
+
+
+
 @media (max-width: 576px) {
   h1 {
     display: none;
@@ -92,6 +106,7 @@ footer {
   }
 
   #leftCon {
+  filter: blur(1.5rem);
     height: auto;
     margin-bottom: 20px;
   }
@@ -102,6 +117,7 @@ footer {
   }
 
   #form {
+
     margin-top: 20px;
   }
 }
@@ -118,4 +134,9 @@ footer {
   #list {
     margin-left: 12px;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 15px;
 }

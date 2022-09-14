@@ -28,7 +28,7 @@
           <div id="list">
             <tr>
               <th>
-                <a href="#">Home</a>
+                <a href="./">Home</a>
               </th>
               <th>
                 <a href="#">About Us</a>
@@ -59,23 +59,47 @@
                 placeholder="Categories"
               /><br />
 
-              <label for="ratings">Ratings</label><br />
+              <label for="price">Choose Price Level</label><br />
+              <select name="price" id="price">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <!-- <input
+                type="text"
+                id="price"
+                name="price"
+                placeholder="Price Range"
+              /> -->
+              <br />
+
+                <!-- <label for="ratings">Ratings</label><br />
               <input
                 type="text"
                 id="ratings"
                 name="ratings"
                 placeholder="Ratings"
-              /><br />
+              /> -->
+              <input type="checkbox" id="hot" name="hot" value="hot_and_new">
+              <label for="hot"> Hot and New</label><br>
+              <input type="checkbox" id="reservation" name="reservation" value="reservation">
+              <label for="reservation"> Reservation</label><br>
+              <input type="checkbox" id="wheelchair" name="wheelchair" value="wheelchair_accessible">
+              <label for="wheelchair"> Wheelchair Accessible</label><br>
 
-              <label for="destination">Price</label><br />
-              <input
-                type="text"
-                id="price"
-                name="price"
-                placeholder="Price Range"
-              />
+
+
+
               <br />
               <br />
+              <!-- <label for="typeRest">Attribute</label><br />
+                <select name="typeRest" id="typeRest">
+                  <option value="hot_and_new">Hot and New</option>
+                  <option value="reservation">Reservation</option>
+                  <option value="wheelchair_accessible">Wheelchair Accessible</option>
+                </select> -->
 
               <input type="submit" value="Search" />
               <br />
@@ -92,13 +116,13 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" class="d-block w-100" alt="...">
+                    <img src="https://images.unsplash.com/photo-1543352634-99a5d50ae78e?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="d-block w-100" alt="...">
+                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="d-block w-100" alt="...">
+                    <img src="https://images.unsplash.com/photo-1594998893017-36147cbcae05?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1186&q=80" class="d-block w-100" alt="...">
                 </div>
               </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -113,13 +137,18 @@
       </section> 
 
     </main>
-    <footer></footer>
+  
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
