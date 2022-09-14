@@ -24,6 +24,10 @@ li{
   max-width: 300px;
 }
 
+#show {
+  background-color: white;
+}
+
 body{
   border: 2px lavender;
   height: 1000px;
