@@ -81,6 +81,12 @@ footer{
 
 }
 
+.restCard:hover{
+  background-color: yellow;
+}
+
+
+
 @media (max-width: 576px) {
   h1{
     display: none;
@@ -112,3 +118,14 @@ footer{
   margin-left: 12px;
 }
 }
+::-webkit-scrollbar {
+  width: 0px;
+  height: 15px;
+  }
+  /* ::-webkit-scrollbar-track-piece  {
+  background-color: #C2D2E4;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #0A4C95; */
+  /* } */
