@@ -159,3 +159,48 @@ function elementFactory({
   }
   return newElt;
 }
+
+// GEOLOCATION API (https://www.javascripttutorial.net/web-apis/javascript-geolocation/)
+
+(() => {
+  const message = document.querySelector('#message');
+
+  // check if the Geolocation API is supported. The gelocation API is available through the 'navigator.geolocation' object. (https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+  if (!navigator.geolocation) {
+      message.textContent = `Your browser doesn't support Geolocation`;
+      message.classList.add('error');
+      return;
+  }
+
+  // handle click event
+  const btn = document.querySelector('#show');
+  btn.addEventListener('click', function () {
+      // get the current position
+      navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  });
+
+
+  // handle success case
+  function onSuccess(position) {
+      const {
+          latitude,
+          longitude
+      } = position.coords;
+
+      message.classList.add('success');
+
+      // creepy, don't uncomment
+      // message.textContent = `Your location: (${latitude},${longitude})`;
+
+      // use of geolocation to inut
+      document.getElementById("location").value = latitude+", "+longitude;
+      document.getElementById("submit").click();
+  }
+
+
+  // handle error case
+  function onError() {
+      message.classList.add('error');
+      message.textContent = `Failed to get your location!`;
+  }
+})();
