@@ -1,9 +1,10 @@
 const apiKey =
   "2GtM4rUXq5x4gU58dniAqURjtQBXsi-7ez8M9eJ9UNe7P72UHJtrknhKNKcH8vy6UHMfLbNe_Og0uPzUrdK48Zv9vIm2KR9iY035tz1dnrsuJiQyGy-a6JYVxlkfY3Yx";
-console.log(apiKey);
-  const cardContainer = document.getElementById("rightCon");
-const imgsrc =
+
+const defImg =
   "https://img.freepik.com/premium-vector/update-concept-application-loading-process-symbol-web-screen-vector-illustration-flat_186332-1253.jpg?";
+
+const cardContainer = document.getElementById("rightCon");
 
 export function clearArea() {
   while (cardContainer.firstChild) {
@@ -12,20 +13,35 @@ export function clearArea() {
   document.getElementById("form").reset();
 }
 
-export function inputInfor(locationArea, categories) {
+export function inputInfor(locationArea, categories,price,checkboxValue) {
   let requireUrl = `https://api.yelp.com/v3/businesses/search?location=${locationArea}`;
   if (categories) {
     requireUrl += `&categories=${categories}`;
   }
+  if(price){
+    requireUrl += `&price=${price}`
+  }
+  if(checkboxValue.length>0){
+    let attrsValue="&attributes=";
+    for(let i=0;i<checkboxValue.length;i++){
+      if(i===0){
+      attrsValue += `${checkboxValue[i]}`
+      }
+      else{
+        attrsValue += `,${checkboxValue[i]}`
+      }
+    }
+    requireUrl += attrsValue;
+  }
+ 
   const encodeWeb = encodeURIComponent(requireUrl);
-  console.log(encodeWeb);
-  let endPoint = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${apiKey}&apiUrl=${encodeWeb}`;
+  const endPoint = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${apiKey}&apiUrl=${encodeWeb}`;
   axios(endPoint)
     .then((result) => {
-      console.log(result);
       createCard(result.data.businesses);
+      console.log(result.data.businesses)
     })
-    .catch((err) => console.error(err));
+    .catch((err) => console.log(err.response));
 }
 
 function createCard(value) {
@@ -36,59 +52,110 @@ function createCard(value) {
     listNumber = value.length;
   }
   for (let i = 0; i < listNumber; i++) {
-    const restCard = document.createElement("div");
-    restCard.classList.add("restCard");
-    cardContainer.appendChild(restCard);
+    const restCard =elementFactory({
+      eltType: "div",
+      classNames: ["restCard"],
+      parentElt: cardContainer,
+    })
 
+    const img = elementFactory({
+      eltType: "img",
+      classNames: ["card-img-top","restImg"],
+      parentElt: restCard,
+      attrs: [
+        { name: "alt", value: "can not find picture" },
+        { name: "src", value: defImg },
+      ],
+    });
     const imgValue = value[i].image_url;
-    const img = document.createElement("img");
-    img.classList.add("restImg");
-    img.src = imgValue ? imgValue : imgsrc;
-    restCard.append(img);
+    img.src = imgValue
+    
+    const infor = elementFactory({
+      eltType: "div",
+      classNames: ["inforContainer","card-body"],
+      parentElt: restCard,
+    });
+    
+    const title = elementFactory({
+      eltType: "h4",
+      classNames: ["card-title","restTitle"],
+      parentElt: infor,
+      text: value[i].name,
+    });
 
-    const infor = document.createElement("div");
-    infor.classList.add("inforContainer");
-    restCard.append(infor);
+    const addresses = elementFactory({
+      eltType: "h6",
+      classNames: ["card-text","addresses"],
+      parentElt: infor,
+      text: `ADDRESS : ${value[i].location.display_address.join(" ")}`
+    });
+    
+    const price = elementFactory({
+      eltType: "h6",
+      classNames: ["price"],
+      parentElt: infor,
+      text: value[i].price?`PRICE : ${value[i].price}`:"",
+    });
 
-    const title = document.createElement("h4");
-    title.classList.add("restTitle");
-    title.innerText = value[i].name;
-    infor.append(title);
+    const rating = elementFactory({
+      eltType: "h6",
+      classNames: ["rating"],
+      parentElt: infor,
+      text: `RATING : ${value[i].rating} (Based on ${value[i].review_count} review) `,
+    });
 
-    const addresses = document.createElement("h6");
-    addresses.classList.add("addresses");
-    addresses.innerText = `Addresses : ${value[i].location.display_address.join(
-      " "
-    )}`;
-    infor.append(addresses);
+    const transactions = elementFactory({
+      eltType: "p",
+      classNames: ["transactions"],
+      parentElt: infor,
+      text: value[i].transactions.length===0?"DINING ONLY ":`TRANSACTION : ${value[i].transactions.join(
+        " , ")}`,
+    });
 
-    const price = document.createElement("h6");
-    price.classList.add("price");
-    price.innerText = `price : ${value[i].price}`;
-    infor.append(price);
+    const phoneNumber = elementFactory({
+      eltType: "a",
+      classNames: ["phoneNumber"],
+      parentElt: infor,
+      text: `PHONE : ${value[i].phone}`,
+      attrs:[{name:"onclick", value:`window.open("tel:${value[i].phone}")`}]
+    });
 
-    const rating = document.createElement("h6");
-    rating.classList.add("rating");
-    rating.innerText = `rating : ${value[i].rating}`;
-    infor.append(rating);
-
-    const phoneNumber = document.createElement("div");
-    phoneNumber.classList.add("phoneNumber");
-    phoneNumber.innerText = `phone : ${value[i].phone}`;
-    infor.append(rating);
-
-    const transactions = document.createElement("div");
-    transactions.classList.add("transactions");
-    transactions.innerText = `transactions : ${value[i].transactions.join(
-      " , "
-    )}`;
-    infor.append(transactions);
-
-    const learnMore = document.createElement("a");
-    learnMore.classList.add("learnMore");
-    learnMore.innerText = "Learn More";
-    learnMore.href = value[i].url;
-    learnMore.setAttribute("target", "_blank");
-    infor.append(learnMore);
+    const learnMore = elementFactory({
+      eltType: "a",
+      classNames: ["learnMore"],
+      parentElt: infor,
+      text: "Learn More",
+      attrs: [{name:"target", value:"_blank"}
+            ,{name:"href", value: value[i].url}]
+    });
   }
+}
+
+function elementFactory({
+  eltType,
+  classNames,
+  parentElt,
+  text,
+  attrs,
+}){
+  if (!eltType) {
+    return undefined;
+  }
+  const newElt = document.createElement(eltType);
+  if (classNames) {
+    newElt.classList.add(...classNames);
+  }
+  if (text) {
+    newElt.innerText = text;
+  }
+  if (parentElt) {
+    parentElt.append(newElt);
+  }
+  if (attrs) {
+    for (const attr of attrs) {
+      const { name: arrtName, value: attrValue } = attr;
+      newElt.setAttribute(arrtName, attrValue);
+    }
+  }
+  return newElt;
 }
