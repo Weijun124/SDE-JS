@@ -1,41 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>About Us</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <!-- CSS Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./stylesheet.css" />
+  </head>
+  <body>
+    <!-- top menu bar -->
+    <header id="header">
+      <img src="./src/logo.png" alt="logo c" />
+      <h1>Restaurant Scanner</h1>
+    </header>
+
+    <!-- navigation bar -->
+    <div id="list">
+      <tr>
+        <th>
+          <a href="index.html">Home</a>
+        </th>
+        <th class="contact">
+          <a href="#">Contact Us</a>
+        </th>
+      </tr>
+    </div>
+
+    <!--title of page -->
     
-    <section>
-        <h2>How to Use the Website</h2>
-        <p>Welcome to our website. We are so glad that you are here. You'll notice some cool featuresabout </p>
+    <!-- How to Section -->
+    <section id="howTo">
+      <h2>How to Use the Website</h2>
+      <p>
+        Welcome to our website. We are so glad that you are here. Restaurant
+        Scanner is an innovative website using the Yelp API to help you find
+        Restaurants in your area and search by location. It minimizes all the
+        noise and advertisements that Yelp.com tends to have but all of the
+        necessary information that you still want.
+      </p>
+      <p>
+        We feature a modern and simplistic view that any one can use. You can
+        search by location, category, price level, and wheelchair accessibility.
+      </p>
     </section>
- 
 
-    <sec>
-        <img src="" alt="img of founder:Weijun">
-        <p>Weijun is Software Engineer and veteran of the United States Army.</p>
-    </sec>
-    <sec> 
-        <img src="" alt="img of founder: Kevin ">
-        <p>Kevin is a Software Engineer and veteran of the United States Navy.</p>
-    </sec>
-    <sec>     
-        <img src="" alt="img of founder: Miggie">
-        <p>Miggie is a Software Engineer and veteran of the United States Army.</p>
-    </sec>
-    <sec>
-        <img src="" alt="img of founder: Nabin">
-        <p>Nabin is a Software Engineer and veteran of the United States Army.</p>
-    </sec>
-   
-    
-   
-   
-    
+    <!-- Founder Bio -->
+    <div id="bio">
+      <h2>Founders' Bios</h2>
+      <section id="card">
+        <img src="src/image2.png" alt="img of founder:Weijun" />
+        <p>
+          Weijun is Software Engineer and veteran of the United States Army. His
+          favorite food is
+        </p>
+      </section>
 
-</body>
+      <section id="card">
+        <img src="src/image3.png" alt="img of founder: Kevin " />
+        <p>
+          Kevin is a Software Engineer and veteran of the United States Navy.
+          His favorite food is pizza.
+        </p>
+      </section>
+
+      <section id="card">
+        <img src="src/image4.png" alt="img of founder: Miggie" />
+        <p>
+          Miggie is a Software Engineer and veteran of the United States Army
+          Their favorite food is concon.
+        </p>
+      </section>
+
+      <section id="card">
+        <img src="src/image1.png" alt="img of founder: Nabin" />
+        <p>
+          Nabin is a Software Engineer and veteran of the United States Army.
+          His favorite food is
+        </p>
+      </section>
+    </div>
+
+    <!-- JS Script -->
+    <section>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"
+      ></script>
+      <script type="module" src="./script.js"></script>
+    </section>
+  </body>
 </html>
