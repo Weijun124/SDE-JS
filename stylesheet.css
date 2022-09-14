@@ -21,7 +21,7 @@
   }
 
   a{
-    background-color: gold;
+    background-image: linear-gradient(to bottom right, red, yellow);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -57,22 +57,26 @@
  align-items: center;
  justify-content: center;
  flex-basis: 40%;
- border: 1px solid black;
+ border: 1px solid gold;
  width: 22%;
  flex-wrap: wrap;
  margin: 4px 20px ;
  float:left;
- background-color: gold;
+ background-image: linear-gradient(to bottom right, red, yellow);
+ height: 300px;
+ border-radius: 5%;
  }
 
  img {
     max-width: 50%;
+    border-radius: 50%;
   }
 
   p{
     margin-left: 3%;
   }
 
+  /* media query */
 
 
 
