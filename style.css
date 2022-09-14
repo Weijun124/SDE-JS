@@ -4,25 +4,21 @@
 
 header {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: left;
+  color: white;
   border: 2px lavender;
   height: 90px;
   margin-bottom: 2%;
-  background-color: lavender;
 }
 
-li {
-  border: 2px black solid;
-  background-color: green;
-  text-decoration: none;
-  width: 15%;
-  float: left;
+#list {
+  margin-left: auto;
+  margin-right: 100px;
 }
 
 #form {
-  background-color: rgba(0,0,0,0.35);
-  height:60%
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 60%
 }
 
 
@@ -32,17 +28,17 @@ li {
 
 
 #show {
+  margin-left: 138px;
   background-color: white;
 }
 
 body {
-  background-image:url('https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-image: url('https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: 2px lavender;
   width: 100%;
- background-color: lavender;
 }
 
 #leftCon {
@@ -53,7 +49,7 @@ body {
   margin-bottom: 2%;
   float: center;
   justify-content: center;
-  color:white;
+  color: white;
 }
 
 label {
@@ -93,7 +89,6 @@ input {
 
 .restCard:hover {
   background-color: lightskyblue
-
 }
 
 
@@ -108,7 +103,7 @@ input {
   }
 
   #leftCon {
-  filter: blur(1.5rem);
+    filter: blur(1.5rem);
     height: auto;
     margin-bottom: 20px;
   }
