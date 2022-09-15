@@ -22,12 +22,12 @@
   <body>
     <main>
       <header id="header">
-        <img src="./src/logo.png" alt="logo c" />
+        <img src="./src/logo.png" alt="logo c" id="logo"/>
         <h2 id="headerTitle">Restaurant Scanner</h2>
          <div id="list">
-                <a href="./">Home</a>
-                <a href="./aboutus.html">About Us</a>
-                <a href="mailto: founder@fakeemail.com">Contact Us</a>
+                <a href="./" class="btn  btn-success btn-sm">Home</a>
+                <a href="./aboutus.html" class="btn  btn-success btn-sm">About Us</a>
+                <a href="mailto: founder@fakeemail.com" class="btn  btn-success btn-sm">Contact Us</a>
           </div>
       </header>
       <div id="bottom">
@@ -64,7 +64,7 @@
               <input type="checkbox" id="reservation" name="reservation" value="reservation">
               <label for="reservation"> Reservation</label><br>
               <input type="checkbox" id="wheelchair" name="wheelchair" value="wheelchair_accessible">
-              <label for="wheelchair"> Wheelchair Accessible</label><br>
+              <label for="wheelchair"><i class="fa-solid fa-wheelchair" id="wheelChair"></i></label><br>
               <br />
               <input id="submit" type="submit" value="Search" class="btn btn-success" />
               <br />

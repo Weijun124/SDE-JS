@@ -107,28 +107,28 @@ function createCard(value) {
     });
 
     const addresses = elementFactory({
-      eltType: "h6",
+      eltType: "div",
       classNames: ["card-text", "addresses"],
       parentElt: infor,
       text: `ADDRESS : ${value[i].location.display_address.join(" ")}`,
     });
 
     const price = elementFactory({
-      eltType: "h6",
+      eltType: "div",
       classNames: ["price"],
       parentElt: infor,
       text: value[i].price ? `PRICE : ${value[i].price}` : "",
     });
 
     const rating = elementFactory({
-      eltType: "h6",
+      eltType: "div",
       classNames: ["rating"],
       parentElt: infor,
       text: `RATING : ${value[i].rating} (Based on ${value[i].review_count} review) `,
     });
 
     const transactions = elementFactory({
-      eltType: "p",
+      eltType: "div",
       classNames: ["transactions"],
       parentElt: infor,
       text:

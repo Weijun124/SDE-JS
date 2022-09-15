@@ -7,7 +7,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border: 2px lavender;
   width: 100%;
 }
 
@@ -15,7 +14,6 @@ header {
   display: flex;
   justify-content: left;
   color: white;
-  border: 2px lavender;
   height: 90px;
   margin-bottom: 2%;
 }
@@ -29,35 +27,19 @@ header {
 
 #time {
   font-size: 30px;
-  -webkit-text-stroke: 4px rgb(190, 239, 75);
+  -webkit-text-stroke: 1px rgb(190, 239, 75);
+  margin-right: 200px;
+  margin-top: 20px;
 }
-.card-title.restTitle{
-  font-style:oblique;
-  font-size: 130%;
-  color: rgb(102, 202, 97);
-}
-
-.learnMore{
- color: rgb(101, 216, 55);
-}
-.phoneNumber{
-  color:rgb(190, 239, 75);
-}
-
 
 #list {
   margin-left: auto;
   margin-right: 100px;
-
+  margin-top:10px;
 }
 
 #list a {
   margin: 0px 15px;
-}
-
-#time {
-  margin-right: 200px;
-  margin-top: 20px;
 }
 
 #bottom {
@@ -80,20 +62,17 @@ header {
 
 #show {
   margin-left: 70px;
+  height: 10%;
+  width: 20%;
+  color: rgb(101, 216, 55);
 }
 
 #form {
   margin-left: 10px;
   width: 50%;
   background-color: rgba(0, 0, 0, 0.35);
-  height: 60%;
+  height: 70%;
   border-radius: 20px;
-}
-
-i {
-  height: 10%;
-  width: 20%;
-  color: rgb(101, 216, 55);
 }
 
 label {
@@ -120,6 +99,12 @@ input[type="checkbox"] {
   width: 8%;
 }
 
+#wheelChair{
+  color: rgb(18, 163, 235);
+  font-size:30px;
+}
+
+
 #submit {
   margin-left: 90px;
   font-size: 24px;
@@ -134,37 +119,59 @@ input[type="checkbox"] {
   border-radius: 2%;
 }
 
-#imgslide {
-  border-radius: 10%;
-  height: 480px
+#carouselExampleIndicators {
+  height:480px;
+  width: 700px;
+}
+#carouselExampleIndicators img{
+  height:480px;
+  width: 700px;
+  border-radius: 10px;
 }
 
 .restCard {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   margin-top: 10px;
   margin-left: 26px;
   height: 320px;
   width: 75%;
   color: white;
   border: 4px solid black;
-  border-image: linear-gradient(black, white) 30;
-
+  border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
 }
 
 .restImg {
   float: left;
   width: 35%;
-  height: 272px;
+  height: 312px;
 }
 
 .inforContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin-left: 13px;
-  font-size: 20px;
-  width: 60%;
+  font-size: 18px;
+  width: 800px;
   background-color: rgba(0, 0, 0, 0.45);
 
+}
+
+.card-title.restTitle{
+  text-decoration: none;
+  font-style:oblique;
+  font-size: 130%;
+  color: rgb(102, 202, 97);
+  font-weight: 900;
+}
+
+.learnMore{
+  text-decoration: none;
+ color: rgb(101, 216, 55);
+}
+.phoneNumber{
+  text-decoration: none;
+  color:rgb(190, 239, 75);
 }
 
 .restCard:hover {
@@ -173,62 +180,165 @@ input[type="checkbox"] {
 
 .inforContainer:hover {
   /* background-color: lightskyblue */
-  background-color: hsla(242, 80%, 46%, 0.3);
+  background-color: hsla(240, 72%, 46%, 0.202);
   transition: background-color 0.8s;
 }
 
 #show:hover {
   cursor: pointer;
+  color:red;
 }
-
-@media (max-width: 576px) {
-  h1 {
-    display: none;
-  }
-
-  #bottom {
-    flex-direction: column;
-  }
-
-  #leftCon {
-    filter: blur(1.5rem);
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  #list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #form {
-    margin-top: 20px;
-  }
+#list a:hover{
+  background-color: #f6b73c;
 }
-
-@media (max-width: 768px) {
-  #list {
-    display: inline;
-    justify-content: center;
-    margin-left: 12px;
-  }
-}
-
-@media (max-width: 992px) {
-  #headerTitle {
-    font-size: 25px;
-  }
-
-  #time {
-    font-size: 15px;
-  }
-
-  #list {
-    margin-left: 12px;
-  }
+a:hover{
+  cursor: pointer;
+  font-weight: 700;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
   height: 15px;
+}
+@media only screen and (min-width:400px)and (max-width: 576px){
+  #headerTitle{
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  #logo{
+    width:30px;
+    height: 30px;
+  }
+  #time{
+      display: none;
+    }
+    #list {
+      margin-top: 10px;
+      margin-right: 0;
+      font-size: 12px;
+    }
+  #show{
+    font-size: 1.3em
+  }
+  #bottom {
+    display: block;
+  }
+  #left {
+    width: 600px;
+  }
+  #form{
+    height:80%;
+  }
+  #rightCon {
+    height: 700px;
+    width: 600px;
+    margin:5px auto;
+    overflow: scroll;
+    border-radius: 2%;
+  }
+  #carouselExampleIndicators {
+    display: none;
+  }
+  
+  .restCard {
+    display: flex;
+    margin:10px auto;
+    height: 320px;
+    width: 80%;
+    color: white;
+    border: 4px solid black;
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+  }
+  .inforContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 13px;
+    font-size:11px;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+  
+  .card-title.restTitle{
+    font-style:oblique;
+    font-size: 90%;
+    color: rgb(102, 202, 97);
+    font-weight: 900;
+  }
+}
+@media only screen and (min-width:577px) and (max-width: 768px) {
+  #headerTitle{
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  #time{
+      display: none;
+    }
+  
+  #show{
+    font-size: 1.3em
+  }
+  #list {
+    margin-right: 20px;
+  }
+  #left {
+    width: 600px;
+  }
+  #form{
+    height:80%;
+  }
+  #carouselExampleIndicators {
+    height:280px;
+    width: 300px;
+    margin-top:100px;
+  }
+  #carouselExampleIndicators img{
+    height:280px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  .inforContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 13px;
+    font-size:11px;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+  
+  .card-title.restTitle{
+    font-style:oblique;
+    font-size: 90%;
+    color: rgb(102, 202, 97);
+    font-weight: 900;
+  }
+} 
+
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+  #headerTitle{
+    font-size: 32px;
+  }
+  #time{
+    font-size: 17px;
+  }
+  #form{
+    height:80%;
+  }
+  .inforContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 13px;
+    font-size: 13px;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+  
+  .card-title.restTitle{
+    font-style:oblique;
+    font-size: 130%;
+    color: rgb(102, 202, 97);
+    font-weight: 900;
+  }
 }
