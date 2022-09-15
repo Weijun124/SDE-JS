@@ -1,11 +1,13 @@
-import{clearArea,inputInfor} from "./helpFunction.js";
+import{clearArea,inputInfor,onError,onSuccess} from "./helpFunction.js";
+
+const btn = document.querySelector('#show');
 
 document.getElementById("form").addEventListener("submit", (e)=>{
       e.preventDefault();
       const locationArea=document.getElementById("location").value;
       const categories = document.getElementById("categories").value;
       const price=document.getElementById("price").value;
-      const hot=document.getElementById("hot");
+      const hot=document.getElementById("hot");  //hot.checked=false
       const reservation=document.getElementById("reservation");
       const wheel=document.getElementById("wheelchair");
       const checkbox=[hot,reservation,wheel];
@@ -14,10 +16,10 @@ document.getElementById("form").addEventListener("submit", (e)=>{
       inputInfor(locationArea,categories,price,checkboxValue);
 })
 
-let date = new Date();
-let today = new Intl.DateTimeFormat("en-US").format(date);
+btn.addEventListener('click', ()=> {
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+});
 
-document.getElementById("footer").innerText=today;
 
 
 
