@@ -17,7 +17,7 @@ A simple interface for finding restaurants and information about them.
 
 ## Description
 
-_{This application allows a user to find details about restaurants through the Yelp API. The user can enter location or other preferences for their search or use geolocation to find restaurants in their area.}_
+_This application allows a user to find details about restaurants through the Yelp API. The user can enter location or other preferences for their search or use geolocation to find restaurants in their area._
 
 ## Setup/Installation Requirements
 
