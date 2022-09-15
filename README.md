@@ -29,5 +29,3 @@ _{This application allows a user to find details about restaurants through the Y
 ## Known Bugs
 
 - _Requires Proxy Server in order to run_
-
-for the JS team project
