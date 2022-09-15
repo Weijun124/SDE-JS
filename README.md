@@ -1,5 +1,7 @@
 # SDE-JS
 
+<img src="src/App_Screenshot.jpeg" alt="screnshot of app" />
+
 # _{Restaurant Scanner}_
 
 By Miggie Garcia, Nabin Dhakal, Weijun Huang, and Kevin Kash.
