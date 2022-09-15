@@ -1,8 +1,7 @@
-# SDE-JS
+# _Restaurant Scanner_
 
 <img src="src/App_Screenshot.jpeg" alt="screnshot of app" />
 
-# _Restaurant Scanner_
 
 By Miggie Garcia, Nabin Dhakal, Weijun Huang, and Kevin Kash.
 A simple interface for finding restaurants and information about them.
