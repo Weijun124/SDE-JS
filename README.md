@@ -8,7 +8,6 @@ A simple interface for finding restaurants and information about them.
 
 ## Technologies Used
 
-- _List_
 - _HTML_
 - _CSS_
 - _JAVASCRIPT_
